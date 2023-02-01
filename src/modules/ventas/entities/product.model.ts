@@ -12,7 +12,7 @@ export class ProductEntity{
         name:'create_at',
         type:'timestamptz',
         default:() => 'CURRENT_TIMESTAMP',
-    }  )
+    })
     
     createAT:Date;//atributo
 
