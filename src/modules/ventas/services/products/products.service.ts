@@ -5,7 +5,7 @@ import { FindOptionsWhere, ILike, Repository } from 'typeorm';
 import { plainToInstance } from 'class-transformer';
 import { response } from 'express';
 import { CreateProductDto, ReadProductDto, FilterProductDto, UpdateProductDto } from '../../dto';
-import { ProductEntity } from '../../entities/product.model';
+import { ProductEntity } from '../../entities/product.entity';
 import { PaginationDto } from '../../dto/pagination/pagination.dto';
 
 @Injectable()
