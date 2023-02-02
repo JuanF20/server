@@ -20,7 +20,7 @@ import {
     IsIntValidationOptions
   } from '@shared/validation';
 
-  //validar los campos de la clase
+   //validar los campos de la clase
 
   export class BaseProductDto {
 
