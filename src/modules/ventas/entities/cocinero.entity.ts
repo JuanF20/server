@@ -58,6 +58,7 @@ export class CocineroEntity {
   //Relaciones
   @OneToMany(() => CocinaEntity, (cocina) => cocina.cocineros)
   cocinero: CocinaEntity;
+  cocina: any;
   // Relaciones
 
   @BeforeInsert()
