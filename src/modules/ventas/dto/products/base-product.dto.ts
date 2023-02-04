@@ -22,34 +22,30 @@ import {
 
    //validar los campos de la clase
 
-  export class BaseProductDto {
-
+export class BaseProductDto {
     
-
+    @IsString()
     @IsNotEmpty(isNotEmptyValidationOptions())
     @IsString(isStringValidationOptions())
     readonly title: string;
-
-  
+    
+    
     @IsNotEmpty(isNotEmptyValidationOptions())
     @IsNumber(isNumberValidationOptions())
     @IsPositive(isPositiveValidationOptions)
     readonly price: number;
 
+    @IsString()
     @IsNotEmpty(isNotEmptyValidationOptions())
     @IsString(isStringValidationOptions())
     readonly description: string;
 
     @ArrayNotEmpty(isNotEmptyValidationOptions())
     @IsArray(IsArrayValidationOptions())
-    readonly images:string[];
+    readonly images: string[];
 
     @IsNotEmpty(isNotEmptyValidationOptions())
     @IsInt(IsIntValidationOptions())
     @IsString(isNumberValidationOptions())
     readonly categpryId: number;
-
-
-
-
   }

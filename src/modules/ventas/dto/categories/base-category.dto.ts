@@ -1,30 +1,41 @@
-import { IsNotEmpty } from "class-validator";
-import { isPositive, IsString } from "class-validator/types/decorator/decorators";
-import { ProductEntity } from "../../entities/product.entity";
-// import { isNotEmptyValidationOpntions, IsStringValidationOpntions,IsPositiveValidationOpntions } from '@shared/validation'
-export  class BaseCategorytDto{
+import {
+  IsString,
+  Allow,
+  IsBoolean,
+  IsNumber,
+  IsNotEmpty,
+  ArrayNotEmpty,
+  IsArray,
+  IsPositive,
+  IsInt,
+} from 'class-validator';
 
-    @IsNotEmpty(isNotEmptyValidationOpntions())
-    @IsString(IsStringValidationOpntions())
-    readonly name:string;
+  import {
+    isBooleanValidationOptions,
+    isNotEmptyValidationOptions,
+    isNumberValidationOptions,
+    isStringValidationOptions,
+    IsArrayValidationOptions,
+    isPositiveValidationOptions,
+    IsIntValidationOptions
+  } from '@shared/validation';
 
-
-    @IsNotEmpty(isNotEmptyValidationOpntions())
-    @IsString(IsStringValidationOpntions())
-    readonly product:ProductEntity[];
-    
-}
-
-function isNotEmptyValidationOpntions(): import("class-validator").ValidationOptions {
-    throw new Error("Function not implemented.");
-}
-
-
-function IsStringValidationOpntions(): import("class-validator").ValidationOptions {
-    throw new Error("Function not implemented.");
-}
+   //validar los campos de la clase
 
 
-function IsPositiveValidationOpntions(): unknown {
-    throw new Error("Function not implemented.");
-}
+    export class BaseCategoryDto {
+      @IsNotEmpty(isNotEmptyValidationOptions())
+      @IsString(isStringValidationOptions())
+      readonly name: string;
+
+      @IsNotEmpty(isNotEmptyValidationOptions())
+      @IsString(isStringValidationOptions())
+      readonly description: string;
+
+      @IsNotEmpty(isNotEmptyValidationOptions())
+      @IsInt(IsIntValidationOptions())
+      @IsString(isNumberValidationOptions())
+      readonly productId: number;
+
+ 
+    }

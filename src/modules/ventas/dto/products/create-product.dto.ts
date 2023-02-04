@@ -1,22 +1,45 @@
-/* eslint-disable prettier/prettier */
-import { IsInt, IsPositive } from "class-validator";
-import { BaseProductDto } from "./base-product.dto";
+import { IsNotEmpty } from 'class-validator';
 import {
-    isBooleanValidationOptions,
-    isNotEmptyValidationOptions,
-    isNumberValidationOptions,
-    isStringValidationOptions,
-    IsArrayValidationOptions,
-    isPositiveValidationOptions,
-    IsIntValidationOptions
+  ArrayNotEmpty,
+  IsArray,
+  IsDate,
+  IsIn,
+  IsNumber,
+  IsPositive,
+  isPositive,
+  IsString,
+  MaxLength,
+  MinLength,
+} from 'class-validator/types/decorator/decorators';
+import { CocineroEntity } from '../../entities/cocinero.entity';
+import {
+  isNotEmptyValidationOpntions,
+  IsStringValidationOpntions,
+  IsPositiveValidationOpntions,
+  isNumberValidationOptions,
+} from '@shared/validation';
+import { BaseProductDto } from './base-product.dto';
 
-  } from '@shared/validation';
 
 //extends accede a los atributos de la clase padre
-export class CreateProductDto extends BaseProductDto{
+export class CreateProductDto extends BaseProductDto {
+  @IsString()
+  @IsNotEmpty(isNotEmptyValidationOpntions())
+  @IsString(IsStringValidationOpntions())
+  readonly title: string;
+  @IsNotEmpty(isNotEmptyValidationOpntions())
+  @IsNumber(isNumberValidationOptions())
+  @IsPositive(IsPositiveValidationOpntions)
+  readonly price: number;
 
-    
+  @IsString()
+  @IsNotEmpty(isNotEmptyValidationOpntions())
+  @IsString(IsStringValidationOpntions())
+  readonly description: string;
 
-    
-
+  @ArrayNotEmpty(isNotEmptyValidationOpntions())
+  @IsArray(isNumberValidationOptions())
+  readonly images: string[];
 }
+
+

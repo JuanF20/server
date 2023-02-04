@@ -34,16 +34,20 @@ export class CategoryEntity {
   @OneToMany(() => ProductEntity, (product) => product.category)
   products: ProductEntity[];
 
+
+  //// Campos
+  
+
   @Column('varchar', {
     name: 'name',
     unique: true,
-    comment: 'titulo del producto',
+    comment: 'titulo de la catgoria ',
   })
   name: string;
 
   @Column('varchar', {
     name: 'descripcion',
-    comment: 'Descripcion del producto',
+    comment: 'Descripcion de la categoria',
     nullable: true,
   })
   descripcion: string;

@@ -1,17 +1,20 @@
 
 
 import { Global, Module } from '@nestjs/common';
+import { ventaProviders } from './ventas/providers';
+
 @Global()
 @Module({
-    imports: [DatabaseModule],
+   // imports: [DatabaseModule],
     controllers: [
         
-        CategoryController
-    ],
-    providers: [
-        ...ventaProviders,
         
-        CategoryService,
+    ],
+    
+    providers: [
+       // ...ventaProviders,
+        
+       ,
         
     ],
     exports:[],

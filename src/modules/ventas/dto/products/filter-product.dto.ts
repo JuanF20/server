@@ -1,5 +1,5 @@
 import { IsNumber, IsOptional, IsString } from 'class-validator';
-import {PaginationDto} from 'core/dto';
+import { PaginationDto } from '../pagination/pagination.dto';
 import {
     isBooleanValidationOptions,
     isNotEmptyValidationOptions,
