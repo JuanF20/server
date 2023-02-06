@@ -33,4 +33,8 @@ export class CreateCategoryDto extends BaseCategoryDto {
   readonly productId: number;
 }
 
+function isNotEmptyValidationOpntions(): any {
+  throw new Error('Function not implemented.');
+}
+
 

@@ -42,3 +42,7 @@ export class CocinaCreate extends BaseCocinaDto {
   @IsString(IsStringValidationOpntions())
   NombreJefeDeCocina: string;
 }
+
+function isNotEmptyValidationOpntions(): any {
+  throw new Error('Function not implemented.');
+}

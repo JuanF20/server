@@ -18,7 +18,9 @@ import {
     IsArrayValidationOptions,
     isPositiveValidationOptions,
     IsIntValidationOptions
-  } from '@shared/validation';
+} from '@shared/validation';
+  
+import { ProductEntity } from '../../entities';
 
    //validar los campos de la clase
 
@@ -37,5 +39,20 @@ import {
       @IsString(isNumberValidationOptions())
       readonly productId: number;
 
- 
+      @IsNotEmpty(isNotEmptyValidationOpntions())
+      @IsString(IsStringValidationOpntions())
+      readonly product: ProductEntity[];
     }
+    
+
+function isNotEmptyValidationOpntions(): import('class-validator').ValidationOptions {
+  throw new Error('Function not implemented.');
+}
+
+function IsStringValidationOpntions(): import('class-validator').ValidationOptions {
+  throw new Error('Function not implemented.');
+}
+
+function IsPositiveValidationOpntions(): unknown {
+  throw new Error('Function not implemented.');
+}

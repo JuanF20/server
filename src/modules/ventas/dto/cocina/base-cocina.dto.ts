@@ -49,3 +49,17 @@ export class BaseCocinaDto {
   @IsNotEmpty(isNotEmptyValidationOpntions())
   readonly Cocinero: CocineroEntity[];
 }
+
+
+
+function isNotEmptyValidationOpntions(): import('class-validator').ValidationOptions {
+  throw new Error('Function not implemented.');
+}
+
+function IsStringValidationOpntions(): import('class-validator').ValidationOptions {
+  throw new Error('Function not implemented.');
+}
+
+function IsPositiveValidationOpntions(): unknown {
+  throw new Error('Function not implemented.');
+}

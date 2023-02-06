@@ -45,3 +45,15 @@ export class UpdateProductDto extends PartialType(BaseProductDto) {
   @IsArray(isNumberValidationOptions())
   readonly images: string[];
 }
+
+function isNotEmptyValidationOpntions(): import('class-validator').ValidationOptions {
+  throw new Error('Function not implemented.');
+}
+
+function IsStringValidationOpntions(): import('class-validator').ValidationOptions {
+  throw new Error('Function not implemented.');
+}
+
+function IsPositiveValidationOpntions(): unknown {
+  throw new Error('Function not implemented.');
+}

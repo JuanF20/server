@@ -18,6 +18,9 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false
   },
+
+  "@ventas/entities": ["./src//modules/ventas/entities"],
+  "@ventas/dto": ["./src/modules/ventas/dto"],
+  "@category/dto": ["./src/modules/dto/category"],
  
-  
 }

@@ -29,7 +29,6 @@ export class CreateProductDto extends BaseProductDto {
   readonly title: string;
   @IsNotEmpty(isNotEmptyValidationOpntions())
   @IsNumber(isNumberValidationOptions())
-  @IsPositive(IsPositiveValidationOpntions)
   readonly price: number;
 
   @IsString()
@@ -40,6 +39,18 @@ export class CreateProductDto extends BaseProductDto {
   @ArrayNotEmpty(isNotEmptyValidationOpntions())
   @IsArray(isNumberValidationOptions())
   readonly images: string[];
+}
+
+function isNotEmptyValidationOpntions(): import('class-validator').ValidationOptions {
+  throw new Error('Function not implemented.');
+}
+
+function IsStringValidationOpntions(): import('class-validator').ValidationOptions {
+  throw new Error('Function not implemented.');
+}
+
+function IsPositiveValidationOpntions(): unknown {
+  throw new Error('Function not implemented.');
 }
 
 

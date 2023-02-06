@@ -1,38 +1,54 @@
-import { IsNumber, IsOptional, IsString } from 'class-validator';
-import { PaginationDto } from '../pagination/pagination.dto';
+import { IsNotEmpty } from 'class-validator';
 import {
-    isBooleanValidationOptions,
-    isNotEmptyValidationOptions,
-    isNumberValidationOptions,
-    isStringValidationOptions,
-    IsArrayValidationOptions,
-    isPositiveValidationOptions,
-    IsIntValidationOptions
-  } from '@shared/validation';
-
-import { title } from 'process';
+  ArrayNotEmpty,
+  IsArray,
+  IsDate,
+  IsIn,
+  IsNumber,
+  IsPositive,
+  isPositive,
+  IsString,
+  MaxLength,
+  MinLength,
+} from 'class-validator/types/decorator/decorators';
+import {
+  isNotEmptyValidationOpntions,
+  IsStringValidationOpntions,
+  IsPositiveValidationOpntions,
+  isNumberValidationOptions,
+} from '@shared/validation';
+import { PaginationDto } from '../pagination/pagination.dto';
 
 //visualizar mediante paginas el nombre,cedula
 export class FilterProductDto extends PaginationDto{
-@IsOptional()
-@IsString(isStringValidationOptions())
-readonly title:string;
-/* limit:number;
-page:number;
-search:string; */
-@IsOptional()
-@IsNumber(isNumberValidationOptions())
-readonly categoryId:number;
+@IsString()
+  @IsNotEmpty(isNotEmptyValidationOpntions())
+  @IsString(IsStringValidationOpntions())
+  readonly title: string;
+  @IsNotEmpty(isNotEmptyValidationOpntions())
+  @IsNumber(isNumberValidationOptions())
+  readonly price: number;
 
+  @IsString()
+  @IsNotEmpty(isNotEmptyValidationOpntions())
+  @IsString(IsStringValidationOpntions())
+  readonly description: string;
 
+  @ArrayNotEmpty(isNotEmptyValidationOpntions())
+  @IsArray(isNumberValidationOptions())
+  readonly images: string[];
+  }
 
+function isNotEmptyValidationOpntions(): import('class-validator').ValidationOptions {
+  throw new Error('Function not implemented.');
+}
 
-@IsOptional()
-@IsString({message:'el campo nomnbre debe ser string'})
-    limit: number;
-    page: number;
+function IsStringValidationOpntions(): import('class-validator').ValidationOptions {
+  throw new Error('Function not implemented.');
+}
 
-
+function IsPositiveValidationOpntions(): unknown {
+  throw new Error('Function not implemented.');
 }
 
 

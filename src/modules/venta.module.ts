@@ -7,8 +7,6 @@ import { ventaProviders } from './ventas/providers';
 @Module({
    // imports: [DatabaseModule],
     controllers: [
-        
-        
     ],
     
     providers: [
@@ -17,6 +15,8 @@ import { ventaProviders } from './ventas/providers';
        ,
         
     ],
-    exports:[],
+   exports: [
+   //   ...ventaProviders
+   ],
 })
 export class VentaModule {}

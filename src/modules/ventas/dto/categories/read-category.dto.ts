@@ -1,6 +1,7 @@
 import { BaseCategoryDto } from "./base-category.dto";
 import { Exclude, Expose } from 'class-transformer';
 
+
 export class ReadCategoryDto extends BaseCategoryDto {
   @Exclude()
   @Expose()
@@ -11,4 +12,6 @@ export class ReadCategoryDto extends BaseCategoryDto {
 
   @Expose()
   readonly productId;
+
+ 
 }
