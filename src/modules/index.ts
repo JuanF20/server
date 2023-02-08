@@ -1,1 +1,1 @@
-export * from './category.module';
+export * from './ventas/dto/categories/category.module';

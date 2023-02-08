@@ -18,10 +18,9 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false
   },
-  "@ventas/entities": ["./src//modules/ventas/entities"],
-  "@ventas/providers": ["./src/modules/ventas/providers"],
-  "@ventas/dto": ["./src/modules/ventas/dto"],
-  "@category/entities": ["./src//modules/entities/entities"],
-  "@category/providers": ["./src/modules/category"],
-  "@category/dto": ["./src/modules/modules/dto/category"]
+  "@ventas/models": ["./src/modules/ventas/models"],
+  "@ventas/controllers": ["./src/modules/ventas/controllers"],
+  "@ventas/provaiders": ["./src/modules/ventas/providers"],
+  "@ventas/services": ["./src/modules/ventas/services"],
+  "@ventas/dto": ["./src/modules/ventas/dto"]
 }

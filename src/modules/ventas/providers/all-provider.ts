@@ -1,4 +1,4 @@
-import { CategoryEntity } from '../entities';
+import { CategoryEntity, CocinaEntity, CocineroEntity } from '../entities';
 import { ProductEntity } from '../entities';
 
 import { RepositoryEnum } from 'src/shared/enums/repository.enum';
@@ -18,17 +18,17 @@ export const categoryProviders = [
        // inject: [DataSourceEnum.PG_DATA_SOURCE]
     },
 
-    //  {
-    //     provide: RepositoryEnum.COCINA_REPOSITORY,
-    //     userFactory: (dataSource: DataSource) =>
-    //         dataSource.getRepository(CocinaEntity),
-    //    // inject: [DataSourceEnum.PG_DATA_SOURCE]
-    // },
+     {
+        provide: RepositoryEnum.COCINA_REPOSITORY,
+        userFactory: (dataSource: DataSource) =>
+            dataSource.getRepository(CocinaEntity),
+       // inject: [DataSourceEnum.PG_DATA_SOURCE]
+    },
      
-    //     {
-    //     provide: RepositoryEnum.COCINERO_REPOSITORY,
-    //     userFactory: (dataSource: DataSource) =>
-    //         dataSource.getRepository(CocineroEntity),
-    //    // inject: [DataSourceEnum.PG_DATA_SOURCE]
-    // }
+        {
+        provide: RepositoryEnum.COCINA_REPOSITORY,
+        userFactory: (dataSource: DataSource) =>
+            dataSource.getRepository(CocineroEntity),
+       // inject: [DataSourceEnum.PG_DATA_SOURCE]
+    }
 ]

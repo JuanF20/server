@@ -1,1 +1,1 @@
-export * from './categoryprovider';
+export * from './all-provider';
